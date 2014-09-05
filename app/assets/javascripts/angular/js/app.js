@@ -7,7 +7,7 @@ angular.module("productListing",[
 
 angular.module('productListing').config(function($stateProvider,$httpProvider){
 	$stateProvider.state("products",{
-		url: "movies",
+		url: "products",
 		templateUrl: "/partials/products.html",
 		controller: "ProductListsController"
 	});

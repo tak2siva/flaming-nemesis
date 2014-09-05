@@ -11,10 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require lib/bootstrap
-//= require lib/angular.min
+//= require bootstrap-sprockets
+//= require angular
+//= require angular-resource
 //= require lib/angular-ui-router
-//= require lib/angular-resource
 //= require angular/js/app
 //= require angular/js/controllers
 //= require angular/js/services

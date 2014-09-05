@@ -1,7 +1,7 @@
 angular.module('productListing.controllers',[]).controller("ProductListsController", function($scope, $state, $stateParams, $window, Product){
 	$scope.products = Product.query();
 	
-	$scope.reload_movies = function(){
+	$scope.reload_products = function(){
 		$state.transitionTo($state.current, $stateParams, {
 		    reload: true,
 		    inherit: false,
@@ -25,7 +25,7 @@ angular.module('productListing.controllers',[]).controller("ProductListsControll
 		$scope.product.$save(function(){
 			console.log("New product saved");
 			$scope.closeModal();
-			$scope.reload_movies();
+			$scope.reload_products();
 		});
 	};
 	
@@ -37,7 +37,7 @@ angular.module('productListing.controllers',[]).controller("ProductListsControll
 		$scope.product.$update(function(){
 			console.log("product updated");
 			$scope.closeModal();
-			$scope.reload_movies();
+			$scope.reload_products();
 		});
 	};
 	
@@ -45,7 +45,7 @@ angular.module('productListing.controllers',[]).controller("ProductListsControll
 		$scope.product.$delete(function(){
 			console.log("product deleted");
 			$scope.closeModal();
-			$scope.reload_movies();	
+			$scope.reload_products();	
 		});
 	};
 });
